@@ -8,6 +8,28 @@
 
 import Foundation
 
-struct Photo: Codable {
-    let 
+struct Favorite: Codable {
+    let createdAt: String
+    let imageData: Data
+    
+    public var dateFormattedString: String {
+        
+        let isoDateFormatter = ISO8601DateFormatter()
+        var formattedDate = createdAt
+        if let date = isoDateFormatter.date(from: createdAt) {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MMM d, yyyy hh:mm a"
+            formattedDate = dateFormatter.string(from: date)
+        }
+        return formattedDate
+        
+    }
+    public var date: Date {
+        let isoDateFormatter = ISO8601DateFormatter()
+        var formattedDate = Date()
+        if let date = isoDateFormatter.date(from: createdAt) {
+            formattedDate = date
+        }
+        return formattedDate
+    }
 }

@@ -70,8 +70,33 @@ class WeatherDetailViewController: UIViewController {
                     self.cityImage.image = images
                     
                 }
-                }
             }
+        }
+    }
+    
+//    private func showAlert(title: String, message: String) {
+//        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+//        let okAction = UIAlertAction(title: "Ok", style: .default) { alert in }
+//        alertController.addAction(okAction)
+//        present(alertController, animated: true, completion: nil)
+//    }
+    
+    @IBAction func saveButton(_ sender: UIBarButtonItem) {
+        if let image = cityImage.image {
+            
+        let date = Date()
+        let isoDateFormatter = ISO8601DateFormatter()
+        isoDateFormatter.formatOptions = [.withFullDate, .withFullTime, .withInternetDateTime, .withTimeZone,.withDashSeparatorInDate]
+        
+        let timestamp = isoDateFormatter.string(from: date)
+            guard let imageData = image.jpegData(compressionQuality: 0.5) else {
+                return print("no image data")
+            }
+            
+        let favortie = Favorite.init(createdAt: timestamp, imageData: imageData)
+            
+            
+        }
     }
 }
 
