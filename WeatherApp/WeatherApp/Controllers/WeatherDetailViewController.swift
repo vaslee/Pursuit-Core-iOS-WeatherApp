@@ -74,12 +74,12 @@ class WeatherDetailViewController: UIViewController {
         }
     }
     
-//    private func showAlert(title: String, message: String) {
-//        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//        let okAction = UIAlertAction(title: "Ok", style: .default) { alert in }
-//        alertController.addAction(okAction)
-//        present(alertController, animated: true, completion: nil)
-//    }
+    private func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default) { alert in }
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
     
     @IBAction func saveButton(_ sender: UIBarButtonItem) {
         if let image = cityImage.image {
@@ -94,7 +94,10 @@ class WeatherDetailViewController: UIViewController {
             }
             
         let favortie = Favorite.init(createdAt: timestamp, imageData: imageData)
-            
+            if let weatherDetail = weatherDetail {
+                WeatherModel.addPhoto(item: favortie)
+                showAlert(title: "Save", message: "Image Saved")
+            }
             
         }
     }

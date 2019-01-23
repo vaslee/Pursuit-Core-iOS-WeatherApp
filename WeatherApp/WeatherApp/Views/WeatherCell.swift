@@ -18,22 +18,9 @@ class WeatherCell: UICollectionViewCell {
     
     public func configureWeather(weather: Weather) {
         
-        
-        
-      
         datesOfWeather.text = weather.dateFormattedDateTimeISO
         highestTemp.text = "High: " + weather.maxTempF.description + "ºF"
         lowestTemp.text = "Low: " + weather.minTempF.description + "ºF"
-        
-//        ImageHelper.shared.fetchImage(urlString: weather.) { (appError, image) in
-//            if let appError = appError {
-//                print(appError.errorMessage())
-//            } else if let image = image {
-//
-//                self.magicPicture.image = image
-//
-//            }
-//        }
-//        self.detailActivity.stopAnimating()
+
     }
 }

@@ -138,10 +138,49 @@
                     <view key="view" contentMode="scaleToFill" id="For-BY-732">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q7U-NA-7KH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FavortiesCell" rowHeight="349" id="Vlw-FM-BPs" customClass="FavortiesCell" customModule="WeatherApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="349"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vlw-FM-BPs" id="uxI-aD-62X">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="348.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Xm-Fw-EDx">
+                                                    <rect key="frame" x="20" y="11" width="374" height="327"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3Xm-Fw-EDx" secondAttribute="trailing" id="KiY-lA-tiD"/>
+                                                <constraint firstItem="3Xm-Fw-EDx" firstAttribute="top" secondItem="uxI-aD-62X" secondAttribute="topMargin" id="cDL-aU-Cla"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="3Xm-Fw-EDx" secondAttribute="bottom" id="mPy-gx-jvF"/>
+                                                <constraint firstItem="3Xm-Fw-EDx" firstAttribute="leading" secondItem="uxI-aD-62X" secondAttribute="leadingMargin" id="uAU-RO-Okb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="favortiesImage" destination="3Xm-Fw-EDx" id="duZ-JZ-VVq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="q7U-NA-7KH" firstAttribute="leading" secondItem="LpD-x4-PqY" secondAttribute="leading" id="EkC-FI-xgv"/>
+                            <constraint firstItem="q7U-NA-7KH" firstAttribute="top" secondItem="LpD-x4-PqY" secondAttribute="top" id="NSS-Aq-a1z"/>
+                            <constraint firstItem="LpD-x4-PqY" firstAttribute="bottom" secondItem="q7U-NA-7KH" secondAttribute="bottom" id="rER-oO-AD4"/>
+                            <constraint firstItem="LpD-x4-PqY" firstAttribute="trailing" secondItem="q7U-NA-7KH" secondAttribute="trailing" id="yuh-AI-eRa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LpD-x4-PqY"/>
                     </view>
                     <navigationItem key="navigationItem" id="erh-5S-TbL"/>
+                    <connections>
+                        <outlet property="tableView" destination="q7U-NA-7KH" id="asl-3b-Yhm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hf9-pY-OHr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

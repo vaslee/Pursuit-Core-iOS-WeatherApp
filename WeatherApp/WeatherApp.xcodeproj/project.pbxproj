@@ -27,6 +27,7 @@
 		90FC7DA221F7CC7A00EE7689 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FC7DA121F7CC7A00EE7689 /* Favorite.swift */; };
 		90FC7DA421F7D59D00EE7689 /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FC7DA321F7D59D00EE7689 /* DataPersistenceManager.swift */; };
 		90FC7DA621F7D60D00EE7689 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FC7DA521F7D60D00EE7689 /* WeatherModel.swift */; };
+		90FC7DF021F91F1700EE7689 /* FavortiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FC7DEF21F91F1700EE7689 /* FavortiesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		90FC7DA121F7CC7A00EE7689 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		90FC7DA321F7D59D00EE7689 /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
 		90FC7DA521F7D60D00EE7689 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		90FC7DEF21F91F1700EE7689 /* FavortiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavortiesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				9003907521F6B51A001C3154 /* WeatherCell.swift */,
+				90FC7DEF21F91F1700EE7689 /* FavortiesCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57EE00A021F15E0F00D76A6E /* ZipCodeHelper.swift in Sources */,
+				90FC7DF021F91F1700EE7689 /* FavortiesCell.swift in Sources */,
 				90FC7DA221F7CC7A00EE7689 /* Favorite.swift in Sources */,
 				9003906C21F6A8E1001C3154 /* ImagesAPIClient.swift in Sources */,
 				57EE009021F15D7000D76A6E /* WeatherViewController.swift in Sources */,
